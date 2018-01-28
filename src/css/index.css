@@ -312,7 +312,7 @@ footer {
 @media(max-width: 768px) {
   #background {
     height: 400px;
-    bottom: 184px;
+    bottom: 100px;
   }
   nav ul {
     justify-content: space-around;

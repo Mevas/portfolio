@@ -68,7 +68,7 @@ function createProjectCard({
         <div class="project-info">
           <h1 class="project-title">${title}</h1>
           <p class="project-description">${description}</p>
-          <div class="project-skills">
+          <div class="project-skills project-skills-${title}">
 
           </div>
         </div>
@@ -79,11 +79,13 @@ function createProjectCard({
       </div>
     </div>`;
   skills.forEach((skill) => {
-    document.getElementsByClassName('project-skills')[0].innerHTML += `<span class="project-skill">${skill}</span>`;
+    document.getElementsByClassName(`project-skills-${title}`)[0].innerHTML += `<span class="project-skill">${skill}</span>`;
   });
 }
 
-createProjectCard(projects[0]);
+projects.forEach((project) => {
+  createProjectCard(project);
+});
 
 function createStatement(inputStat, returnStat) {
   document.getElementsByClassName('terminal-window')[0].innerHTML += `
