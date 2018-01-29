@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <link rel="stylesheet" type="text/css" href="src/css/index.css">
 
-    <script src="src/content/aboutme_content.js"></script>
-    <script src="src/content/statements_content.js"></script>
-
     <title>Alexandru Vasilescu</title>
 </head>
 
@@ -18,15 +15,31 @@
         <nav>
             <ul>
                 <li>
-                    <a class="nav-bar-button projects" href="#projects">Projects</a>
+                    <select class="nav-bar-button" onchange="selectLanguage(this.options[this.selectedIndex].value)">
+                        <option value="en" selected>English</option>
+                        <option value="ro">Română</option>
+                    </select>
                 </li>
                 <li class="separator"></li>
                 <li>
-                    <a class="nav-bar-button about" href="#about">About</a>
+                    <a class="nav-bar-button projects" href="#projects">
+                        <span class="localize" lang="en">Projects</span>
+                        <span class="localize" lang="ro">Proiecte</span>
+                    </a>
                 </li>
                 <li class="separator"></li>
                 <li>
-                    <a class="nav-bar-button contact" href="#contact">Contact</a>
+                    <a class="nav-bar-button about" href="#about">
+                        <span class="localize" lang="en">About</span>
+                        <span class="localize" lang="ro">Despre</span>
+                    </a>
+                </li>
+                <li class="separator"></li>
+                <li>
+                    <a class="nav-bar-button contact" href="#contact">
+                        <span class="localize" lang="en">Contact</span>
+                        <span class="localize" lang="ro">Contact</span>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -36,17 +49,26 @@
         <h1 id="main-title">> </h1>
         <div id="about" class="delimiter">
             <div></div>
-            <h1>About me</h1>
+            <h1 class="localize" lang="en">About me</h1>
+            <h1 class="localize" lang="ro">Despre mine</h1>
             <div></div>
         </div>
         <section>
-            <p>
+            <p class="localize" lang="en">
                 I am Alexandru Vasilescu, living in Bucharest, Romania. I'm an aspiring Software Developer, writing code since middle school.
                 In my free time I like to learn new things and technologies in programming, learn new things about science
-                and new discoveries, and play computer games.
+                and new discoveries, and play PC games.
             </p>
-            <p>
+            <p class="localize" lang="en">
                 Follow my progress by exploring my recent projects below.
+            </p>
+            <p class="localize" lang="ro">
+                Eu sunt Alexandru Vasilescu, locuiesc în București, România. Sunt un Software Developer aspirant, scriind cod înca din școala
+                generală. În timpul meu liber îmi place să învăț tehnologii și noutăți legate de programare, noi lucruri
+                despre știinta și noi descoperiri, și să mă joc pe PC.
+            </p>
+            <p class="localize" lang="ro">
+                Urmează-mi progresul explorând proiectele mele recente de mai jos.
             </p>
             <div class="terminal">
                 <div class="terminal-header">
@@ -61,7 +83,8 @@
         </section>
         <div id="projects" class="delimiter">
             <div></div>
-            <h1>Projects</h1>
+            <h1 class="localize" lang="en">Projects</h1>
+            <h1 class="localize" lang="ro">Proiecte</h1>
             <div></div>
         </div>
 
@@ -71,7 +94,8 @@
 
         <div id="contact" class="delimiter">
             <div></div>
-            <h1>Contact me!</h1>
+            <h1 class="localize" lang="en">Contact me!</h1>
+            <h1 class="localize" lang="ro">Contactează-mă!</h1>
             <div></div>
         </div>
 
@@ -81,10 +105,17 @@
 
         <footer>
             <h4>
-                Designed and developed by Alexandru Vasilescu ©
-                <script type="text/javascript">
-                    document.write(new Date().getFullYear());
-                </script>
+                <span class="localize" lang="en">Designed and developed by Alexandru Vasilescu ©
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                </span>
+                <span class="localize" lang="ro">Proiectat și dezvoltat de Alexandru Vasilescu ©
+                    <script type="text/javascript">
+                        document.write(new Date().getFullYear());
+                    </script>
+                </span>
+
             </h4>
         </footer>
     </div>
