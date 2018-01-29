@@ -154,7 +154,7 @@ select option {
   border: 1px solid #444;
 }
 
-#about+section p {
+.about-me p {
   text-align: center;
   line-height: 35px;
   padding: 0 60px;
@@ -162,7 +162,7 @@ select option {
   letter-spacing: 2px;
 }
 
-#about+section p:nth-child(2) {
+.about-me p.follow-progress {
   margin-top: 20px;
 }
 
@@ -375,8 +375,11 @@ footer {
     padding: 0;
   }
   .delimiter div {
-    width: 20%;
+    width: 15%;
     margin: auto;
+  }
+  #contact div {
+    width: 12%;
   }
   #about+section p {
     padding: 0 60px;
@@ -409,5 +412,17 @@ footer {
   }
   footer {
     font-size: .85em;
+  }
+}
+
+@media(max-width: 375px) {
+  nav ul {
+    font-size: 1em;
+  }
+  #main-title {
+    font-size: 2.4em;
+  }
+  #contact div {
+    width: 8%;
   }
 }
